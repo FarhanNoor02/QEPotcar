@@ -1,16 +1,17 @@
 # QEPotcar
 A pseudopotential library for use with the DFT code Quantum ESPRESSO
 
-# QE-PotLib: The "POTCAR" Experience for Quantum ESPRESSO
+# QE-Potcar: The "POTCAR" Experience for Quantum ESPRESSO
 
 ## 📌 Overview
 In VASP, the `POTCAR` directories provide a unified, predictable structure for functional and methodology types. Quantum ESPRESSO (QE) users, however, often have to manually download, rename, and sort files from various legacy tables, leading to inconsistent directory structures across different research groups. Often, the pseudopotentials have to be downloaded individually for each new project, making this cumbersome.
 
-**QE-PotLib** is a suite of automation scripts designed to "fill the gap." It scrapes official QE legacy databases (PSLibrary and FHI) and organizes them into a standardized, hierarchical structure mimicking the VASP experience:
+**QEPotcar** is a suite of automation scripts designed to "fill the gap." It scrapes official QE legacy databases (PSLibrary and FHI) and organizes them into a standardized, hierarchical structure mimicking the VASP experience:
 
 `Functional > Relativity > Method (PAW/USPP/NC) > Element.UPF`
 
-
+#### INCLUDE:
+A complete and organized library <PseudoPot> with the pseudopotentials already organized allowing for rapid implementation, right away, including the collection of scripts used to develop this library in the first place.
 
 ---
 
@@ -67,3 +68,6 @@ Targets: FHI-PP from Abinit. Fills the gap for Norm-Conserving (NC) potentials, 
 ### 3. reorganize_lib.py
 
 A utility script to pivot existing flat downloads into the nested hierarchy shown above using shutil and os.walk.
+
+## PseudoPot
+A library with all the pseudopotential files all ready reorganized and ready to be used immediately
