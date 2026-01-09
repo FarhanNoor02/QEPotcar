@@ -10,8 +10,8 @@ In VASP, the `POTCAR` directories provide a unified, predictable structure for f
 
 `Functional > Relativity > Method (PAW/USPP/NC) > Element.UPF`
 
-#### INCLUDE:
-A complete and organized library <PseudoPot> with the pseudopotentials already organized allowing for rapid implementation, right away, including the collection of scripts used to develop this library in the first place.
+#### INCLUDES:
+A complete and organized library **PseudoPot** with the pseudopotentials already organized allowing for rapid implementation, right away, including the collection of scripts used to develop this library in the first place.
 
 ---
 
