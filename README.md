@@ -44,12 +44,24 @@ Reorganized_PseudoPot/
 |
 |---NC-Martins-Troullier/
 
-
+```
 ## Requirements
 pip install requests beautifulsoup4
 
+## 🛠 The Toolset
+1. fetch_pslibrary.py
 
+Targets: PSLibrary Legacy Tables. This script performs heavy lifting for Projector Augmented Wave (PAW) and Ultrasoft (USPP) potentials.
+Python
 
+# Key Logic: Sorting by Relativity and Method
+ptype = "PAW" if "kjpaw" in fname else "USPP" if "rrkjus" in fname else None
+rel = "full" if "rel-" in fname else "scalar"
+save_path = os.path.join(TARGET_DIR, functional.upper(), rel, ptype)
 
+2. fetch_fhi_pbe.py
 
-    └── full/
+Targets: FHI-PP from Abinit. Fills the gap for Norm-Conserving (NC) potentials, specifically filtering for PBE functionals to ensure consistency across the library.
+3. reorganize_lib.py
+
+A utility script to pivot existing flat downloads into the nested hierarchy shown above using shutil and os.walk.
